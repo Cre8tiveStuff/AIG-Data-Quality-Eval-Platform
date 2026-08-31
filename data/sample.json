@@ -1,0 +1,6 @@
+[
+    {"prompt": "Summarize the quarterly financial report.", "response": "The company grew by 15% in Q3 due to increased enterprise software sales."},
+    {"prompt": "Translate 'Hello' to French.", "response": "Bonjour"},
+    {"prompt": "Write an essay on climate change.", "response": "Too short"},
+    {"prompt": "Check database connection.", "response": null}
+]

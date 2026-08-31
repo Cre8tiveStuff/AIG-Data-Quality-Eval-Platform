@@ -1,0 +1,20 @@
+{
+    "summary": {
+        "total_records": 4
+    },
+    "metrics": [
+        {
+            "metric": "Completeness",
+            "score_pct": 87.5,
+            "null_count": 1,
+            "total_fields": 8,
+            "status": "PASS"
+        },
+        {
+            "metric": "Text Substantiveness",
+            "score_pct": 71.43,
+            "short_text_count": 2,
+            "status": "WARN"
+        }
+    ]
+}
