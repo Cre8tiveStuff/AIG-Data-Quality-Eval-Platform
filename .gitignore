@@ -1,6 +1,5 @@
-cat << 'EOF' > .gitignore
 venv/
 __pycache__/
 .env
 *.pyc
-EOF
+*.egg-info/
