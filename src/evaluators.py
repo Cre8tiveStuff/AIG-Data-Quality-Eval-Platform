@@ -1,4 +1,5 @@
 import json
+import math
 from typing import Dict, List, Any
 
 class DataQualityEvaluator:
@@ -6,10 +7,21 @@ class DataQualityEvaluator:
     Core Evaluation Engine for AIG Data Quality Platform.
     Evaluates datasets for Schema Completeness, Text Quality, and Format Integrity.
     """
-    
+
     def __init__(self, dataset: List[Dict[str, Any]]):
         self.dataset = dataset
         self.total_records = len(dataset)
+
+    @staticmethod
+    def _is_missing(v: Any) -> bool:
+        """Treats None, empty/whitespace strings, and NaN (from pandas) as missing."""
+        if v is None:
+            return True
+        if isinstance(v, str) and v.strip() == "":
+            return True
+        if isinstance(v, float) and math.isnan(v):
+            return True
+        return False
 
     def evaluate_completeness(self) -> Dict[str, Any]:
         """Calculates percentage of non-null fields across all records."""
@@ -22,7 +34,7 @@ class DataQualityEvaluator:
         for record in self.dataset:
             for k, v in record.items():
                 total_fields += 1
-                if v is None or (isinstance(v, str) and v.strip() == ""):
+                if self._is_missing(v):
                     null_fields += 1
 
         score = round(((total_fields - null_fields) / total_fields) * 100, 2) if total_fields else 0.0
