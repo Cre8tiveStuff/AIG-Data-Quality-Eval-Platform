@@ -52,4 +52,4 @@ Python · Pandas · PyArrow · Pytest · GitHub Actions (CI/CD)
 
 ## License
 
-Not yet licensed — coming soon.
+MIT License — see [LICENSE](LICENSE) for details.
