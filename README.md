@@ -1,6 +1,7 @@
 # AIG Data Quality Eval Engine
-
 [![Run Tests](https://github.com/Cre8tiveStuff/AIG-Data-Quality-Eval-Platform/actions/workflows/tests.yml/badge.svg)](https://github.com/Cre8tiveStuff/AIG-Data-Quality-Eval-Platform/actions/workflows/tests.yml)
+
+**Open towards Team Collaborations & Contract Opportunities.**
 
 A CLI-driven data quality evaluation engine for LLM outputs and datasets. Evaluates completeness and text quality across multiple file formats, with a tested, CI-verified core.
 
